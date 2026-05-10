@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite 50 Anos - Irene</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Particles -->
+    <div id="particles-container"></div>
+
+    <audio id="bg-music" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Unboxing Experience -->
+    <div id="unboxing-container" class="unboxing-container">
+        <div class="envelope" id="envelope">
+            <div class="envelope-back"></div>
+            <div class="card-preview">
+                <!-- Changed 'I' to 'Irene' -->
+                <div class="card-preview-monogram gold-foil">Irene</div>
+            </div>
+            <div class="envelope-front"></div>
+            <div class="envelope-flap" id="flap"></div>
+            <div class="seal" id="seal-btn">I</div>
+        </div>
+        <p class="tap-hint" id="tap-hint">Toque no selo para abrir</p>
+    </div>
+
+    <!-- Main Invitation -->
+    <div id="main-content" class="main-content">
+        <!-- Animated Music Equalizer -->
+        <button id="music-toggle" class="music-btn" aria-label="Tocar música">
+            <div class="equalizer">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </button>
+
+        <div class="card-container" id="card">
+            <div class="card-border">
+                
+                <!-- Hero Section -->
+                <header class="hero">
+                    <p class="subtitle">Celebração de meio século</p>
+                    <h1 class="title gold-foil">Irene</h1>
+                    <p class="age">50 Anos</p>
+                    
+                    <!-- New: Countdown -->
+                    <div class="countdown-badge">
+                        <span id="countdown-text">Calculando...</span>
+                    </div>
+                </header>
+
+                <!-- Elegant Floral/Geometric Divider -->
+                <div class="ornamental-divider">
+                    <svg width="120" height="20" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 10H45M75 10H120" stroke="#c5a059" stroke-width="1.5"/>
+                        <circle cx="60" cy="10" r="4" fill="#c5a059"/>
+                        <path d="M50 10L55 5L60 10L55 15L50 10Z" fill="#ebdcb8"/>
+                        <path d="M70 10L65 5L60 10L65 15L70 10Z" fill="#ebdcb8"/>
+                    </svg>
+                </div>
+
+                <!-- Details Section -->
+                <section class="details">
+                    <div class="detail-item">
+                        <p class="label">Quando</p>
+                        <p class="value">06 de Junho de 2026</p>
+                        <p class="value" style="font-size: 1.5rem;">Sábado, às 19:30</p>
+                    </div>
+
+
+                </section>
+
+                <div class="ornamental-divider" style="transform: rotate(180deg);">
+                    <svg width="120" height="20" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 10H45M75 10H120" stroke="#c5a059" stroke-width="1.5"/>
+                        <circle cx="60" cy="10" r="4" fill="#c5a059"/>
+                        <path d="M50 10L55 5L60 10L55 15L50 10Z" fill="#ebdcb8"/>
+                        <path d="M70 10L65 5L60 10L65 15L70 10Z" fill="#ebdcb8"/>
+                    </svg>
+                </div>
+
+                <!-- Action Buttons (Modals & RSVP) -->
+                <section class="btn-group">
+                    <button class="action-btn outline icon-btn" data-target="modal-location">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        Onde será a festa?
+                    </button>
+                    
+                    <button class="action-btn outline icon-btn" data-target="modal-gifts">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="14" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="22"></line><path d="M19 8v-2a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v2"></path></svg>
+                        Lista de Presentes
+                    </button>
+
+                    <a href="#" id="rsvp-btn" class="action-btn solid icon-btn" target="_blank" style="margin-top: 1rem;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Confirmar Presença
+                    </a>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Location Modal -->
+    <div id="modal-location" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" data-close="modal-location">&times;</button>
+            <h2 class="section-title gold-foil" style="font-size: 2.2rem; margin-bottom: 0.5rem;">Localização</h2>
+            <p class="value" style="font-size: 1.6rem;">Buffet da Tânia</p>
+            <p class="modal-subtitle">Juazeiro do Norte - CE</p>
+            
+            <div class="map-container">
+                <!-- FIX: Added Juazeiro do Norte to query to avoid duplicate results -->
+                <iframe src="https://www.google.com/maps?q=Buffet+da+Tânia,+Juazeiro+do+Norte+-+CE&output=embed" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <a href="https://maps.app.goo.gl/46NkfxisabUx1dnA9" target="_blank" class="action-btn solid">Traçar Rota no Mapa</a>
+        </div>
+    </div>
+
+    <!-- Gifts Modal -->
+    <div id="modal-gifts" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" data-close="modal-gifts">&times;</button>
+            <h2 class="section-title gold-foil" style="font-size: 2.2rem; margin-bottom: 1rem;">Presentes</h2>
+            <p class="modal-subtitle">Sua presença é meu maior presente! Mas se desejar me presentear com algo a mais, aqui estão algumas sugestões do que eu amo:</p>
+            
+            <ul class="gifts-list">
+                <li class="gift-text">Perfumes</li>
+                <li class="gift-text">Calçados Nº 35</li>
+                <li class="gift-text">Roupas Tam. 42</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
