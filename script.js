@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bgMusic = document.getElementById('bg-music');
     const musicBtn = document.getElementById('music-toggle');
     let isPlaying = false;
-    bgMusic.volume = 0.4;
+    bgMusic.volume = 0.15;
 
     sealBtn.addEventListener('click', () => {
         // Play music
