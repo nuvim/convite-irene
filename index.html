@@ -23,8 +23,14 @@
         <div class="envelope" id="envelope">
             <div class="envelope-back"></div>
             <div class="card-preview">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 5px; opacity: 0.8;">
+                    <path d="M12 22C12 22 12 16 12 11M12 11C12 6 16 2 21 2C21 2 22 7 17 12C14.7083 14.2917 12 11 12 11ZM12 11C12 11 9.29167 14.2917 7 12C2 7 3 2 3 2C8 2 12 6 12 11Z" stroke="var(--theme-dark)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
                 <!-- Changed 'I' to 'Irene' -->
                 <div class="card-preview-monogram gold-foil">Irene</div>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-top: 5px; opacity: 0.8; transform: rotate(180deg);">
+                    <path d="M12 22C12 22 12 16 12 11M12 11C12 6 16 2 21 2C21 2 22 7 17 12C14.7083 14.2917 12 11 12 11ZM12 11C12 11 9.29167 14.2917 7 12C2 7 3 2 3 2C8 2 12 6 12 11Z" stroke="var(--theme-dark)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
             </div>
             <div class="envelope-front"></div>
             <div class="envelope-flap" id="flap"></div>
@@ -49,14 +55,9 @@
                 
                 <!-- Hero Section -->
                 <header class="hero">
-                    <p class="subtitle">Você é meu convidado especial</p>
+                    <p class="subtitle">Você é meu convidado(a) especial</p>
                     <h1 class="title gold-foil">Irene</h1>
                     <p class="age">50 Anos</p>
-                    
-                    <!-- New: Countdown -->
-                    <div class="countdown-badge">
-                        <span id="countdown-text">Calculando...</span>
-                    </div>
                 </header>
 
                 <!-- Elegant Floral/Geometric Divider -->
@@ -138,6 +139,14 @@
                 <li class="gift-text">Perfumes</li>
                 <li class="gift-text">Calçados Nº 35</li>
                 <li class="gift-text">Roupas Tam. 42</li>
+                <li class="gift-text" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; margin-top: 1.5rem;">
+                    <div style="font-weight: 700; color: var(--gold-dark); display: flex; align-items: center; gap: 8px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        PIX
+                    </div>
+                    <span style="font-size: 0.9em; font-weight: 500; color: var(--text-dark);">Qualquer valor é bem-vindo!</span>
+                    <span style="font-size: 0.85em; color: var(--text-light); border: 1px dashed var(--gold-light); padding: 8px 12px; border-radius: 4px; margin-top: 0.3rem;">Chave: [Enviar chave Pix depois]</span>
+                </li>
             </ul>
         </div>
     </div>

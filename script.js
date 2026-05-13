@@ -13,25 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         particlesContainer.appendChild(particle);
     }
 
-    // --- 2. Countdown Logic ---
-    const countdownText = document.getElementById('countdown-text');
-    const eventDate = new Date('2026-06-06T19:30:00').getTime();
-    
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = eventDate - now;
-        
-        if (distance < 0) {
-            countdownText.innerText = "É Hoje!";
-            return;
-        }
-        
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        countdownText.innerText = `Faltam ${days} dias`;
-    }
-    updateCountdown();
-    setInterval(updateCountdown, 86400000); // Update daily
-
 
     // --- 3. Unboxing Animation Logic ---
     const sealBtn = document.getElementById('seal-btn');
